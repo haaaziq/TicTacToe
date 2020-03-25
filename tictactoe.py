@@ -10,10 +10,14 @@ else:
 
 print(f'Player 2: {player2}')
 
-board_list=[1,2,3,4,5,6,7,8,9,10]     #Count Chances
-outcome=[' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']       #Initially no input
+#Count Chances
+board_list=[1,2,3,4,5,6,7,8,9,10]     
 
-#----------------------------------W I N  FUNCTION-------------------------------------------------------
+#Initially no input
+outcome=[' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']       
+
+#----------------------------------W I N  F U N C T I O N-------------------------------------------------------
+
 def is_win(player):
     if (set(outcome[7:10]) == set(player) or set(outcome[4:7]) == set(player) or
             set(outcome[1:4]) == set(player)):
@@ -25,7 +29,7 @@ def is_win(player):
     else:
         return False
 
-#------------------------------------------------------------------------------------------------------------
+#-------------------------------------PRINTING BOARD----------------------------------------------------
 
 def display_board(board):
         print('''
@@ -42,7 +46,8 @@ def display_board(board):
                   |      |    
         
         '''.format(board[7],board[8],board[9],board[4],board[5],board[6],board[1],board[2],board[3]))
-#-------------------------------------------------------------------------------------------------------
+
+#-------------------------------------------M A I N------------------------------------------------
 
 play = input('Do you want to start the game(yes/no): ')
 while play == 'yes':
